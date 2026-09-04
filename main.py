@@ -160,7 +160,7 @@ def mostrar_pokedex(info_do_poke):
 #janela inicial
 janela_inicio = Tk()
 janela_inicio.title("Pokédex")
-janela_inicio.geometry("400x250")
+janela_inicio.geometry("600x540")
 janela_inicio.configure(bg=cores[1])
 
 titulo = Label(janela_inicio, text="POKÉDEX", font=("Fixedsys 30"), bg=cores[1], fg=cores[0])
