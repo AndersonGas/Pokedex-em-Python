@@ -1,3 +1,4 @@
+#importanto tkinter
 from tkinter import *
 from tkinter import ttk
 
@@ -19,7 +20,7 @@ def buscar_poke(nome):
     else:    
         print(f"Pokémon não encontrado! Erro {response.status_code}")
 
-nome_poke = "pikachu"
+nome_poke = "lopunny"
 info_do_poke = buscar_poke(nome_poke)
 habilidades_comuns = []
 habilidade_hidden = None
@@ -79,7 +80,7 @@ foto_poke = foto_poke.resize((250, 250))
 foto_poke = ImageTk.PhotoImage(foto_poke)
 
 imagem_poke = Label(frame_poke, image=foto_poke, relief="flat", bg=cores[1], fg=cores[0])
-imagem_poke.place(x=12, y=105)
+imagem_poke.place(x=100, y=85)
 
 id_poke.lift()
 
@@ -128,5 +129,12 @@ if habilidade_hidden:
 
     hidden_habil_poke = Label(janela,text=f"Hidden: {habilidade_hidden}", relief="flat", anchor="center", font=("Verdana 10"), bg=cores[1], fg=cores[0])
     hidden_habil_poke.place(x=300, y=430)
+
+#botôes
+botao_anterior = Button(frame_poke, text="Anterior", relief="raised", overrelief=RIDGE, anchor=NW, font=("Fixedsys 15"), bg=cores[0], fg=cores[1])
+botao_anterior.place(x=380, y=15)
+
+botao_proximo = Button(frame_poke, text="Próximo", relief="raised", overrelief=RIDGE, anchor=NW, font=("Fixedsys 15"), bg=cores[0], fg=cores[1])
+botao_proximo.place(x=500, y=15)
 
 janela.mainloop()
